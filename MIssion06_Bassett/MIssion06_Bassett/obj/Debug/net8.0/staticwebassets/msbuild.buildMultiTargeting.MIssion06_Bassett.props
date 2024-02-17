@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MIssion06_Bassett.props" />
+</Project>
