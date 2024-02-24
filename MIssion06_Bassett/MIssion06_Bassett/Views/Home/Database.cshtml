@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Movie>
+
+
+<table class="table table-bordered">
+    <thead class="fw-bold" style="background-color: lightgray">
+        <tr>
+            <td>Title</td>
+            <td>Year</td>
+            <td>Director</td>
+            <td>Category</td>
+            <td>Rating</td>
+            <td>Edited</td>
+            <td>Copied To Plex</td>
+            <td>Lent To</td>
+            <td>Notes</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Movie m in Model)
+        {
+            <tr>
+                <td>@m.title</td>
+                <td>@m.year</td>
+                <td>@m.director</td>
+                @* Use the categoryMappings dictionary to convert the categoryID to a categoryName. *@
+                <td>@(m.categoryID is null ? "" : ViewBag.categoryMappings[m.categoryID.ToString()])</td>
+                <td>@m.rating</td>
+                <td>@m.edited</td>
+                <td>@m.copiedToPlex</td>
+                <td>@m.lentTo</td>
+                <td>@m.notes</td>
+                <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@m.movieID">Edit</a></td>
+                @* While I would normally never delete using a GET request, I'm not required to and don't feel like making 
+                    a confirmation page, and DotNet won't let me specify a different action for a form. So, an a-tag it is.*@
+                <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@m.movieID">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>

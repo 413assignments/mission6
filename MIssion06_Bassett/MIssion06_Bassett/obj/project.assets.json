@@ -2570,11 +2570,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BYU Rental\\Documents\\GitHub\\misison6\\MIssion06_Bassett\\MIssion06_Bassett\\MIssion06_Bassett.csproj",
+      "projectUniqueName": "C:\\Users\\BYU Rental\\Documents\\GitHub\\mission6\\MIssion06_Bassett\\MIssion06_Bassett\\MIssion06_Bassett.csproj",
       "projectName": "MIssion06_Bassett",
-      "projectPath": "C:\\Users\\BYU Rental\\Documents\\GitHub\\misison6\\MIssion06_Bassett\\MIssion06_Bassett\\MIssion06_Bassett.csproj",
+      "projectPath": "C:\\Users\\BYU Rental\\Documents\\GitHub\\mission6\\MIssion06_Bassett\\MIssion06_Bassett\\MIssion06_Bassett.csproj",
       "packagesPath": "C:\\Users\\BYU Rental\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BYU Rental\\Documents\\GitHub\\misison6\\MIssion06_Bassett\\MIssion06_Bassett\\obj\\",
+      "outputPath": "C:\\Users\\BYU Rental\\Documents\\GitHub\\mission6\\MIssion06_Bassett\\MIssion06_Bassett\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\BYU Rental\\AppData\\Roaming\\NuGet\\NuGet.Config",

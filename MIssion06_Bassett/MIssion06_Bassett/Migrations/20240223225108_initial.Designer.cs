@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MIssion06_Bassett.Migrations
 {
     [DbContext(typeof(MoviesContext))]
-    [Migration("20240217043428_takethree")]
-    partial class takethree
+    [Migration("20240223225108_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,15 +19,32 @@ namespace MIssion06_Bassett.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.2");
 
+            modelBuilder.Entity("MIssion06_Bassett.Models.Category", b =>
+                {
+                    b.Property<int>("categoryID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("categoryName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("categoryID");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("MIssion06_Bassett.Models.Movie", b =>
                 {
                     b.Property<int>("movieID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("category")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("categoryID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("copiedToPlex")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("director")
                         .IsRequired()
@@ -56,7 +73,20 @@ namespace MIssion06_Bassett.Migrations
 
                     b.HasKey("movieID");
 
+                    b.HasIndex("categoryID");
+
                     b.ToTable("Movies");
+                });
+
+            modelBuilder.Entity("MIssion06_Bassett.Models.Movie", b =>
+                {
+                    b.HasOne("MIssion06_Bassett.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("categoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

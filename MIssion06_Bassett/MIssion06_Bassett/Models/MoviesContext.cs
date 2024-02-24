@@ -9,5 +9,10 @@ namespace MIssion06_Bassett.Models
         }
 
         public DbSet<Movie> Movies { get; set; } 
+
+        public DbSet<Category> Categories { get; set; }
+
+
+        
     }
 }
