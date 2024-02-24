@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MIssion06_Bassett")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b86957347c00dcb0e08ea3c84a3d63bb1c28d5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcc37de6ac66204c292830be2bba29800ad3a5bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("MIssion06_Bassett")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MIssion06_Bassett")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

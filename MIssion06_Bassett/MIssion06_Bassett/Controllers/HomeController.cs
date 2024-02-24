@@ -89,10 +89,14 @@ namespace MIssion06_Bassett.Controllers
 
         public IActionResult Delete(int id)
         {
+            // Grab the record we want to delete using the movieID.
             Movie toDelete = _context.Movies.First(x => x.movieID == id);
+
+            // NUKE IT!
             _context.Movies.Remove(toDelete);
             _context.SaveChanges();
 
+            // Redirect to the data page.
             return RedirectToAction("Database");
         }
 
